@@ -1,0 +1,317 @@
+:root {
+    --dark: #281301;
+    --light: rgb(243, 242, 240);
+    --primary-color: #FBEEDE;
+    --primary-color-dark: #F2AF5C;
+    --gray: #F6F6F6;
+    --red: #590902;
+    --caramel: #8C5C03;
+    --beige: #BF8A49;
+    --rose: #8C4D3F;
+}
+
+html{
+    font-family: 'Lumanosimo', cursive, 'Dancing Script', sans-serif;
+}
+
+
+body{
+background-color: var(--primary-color);
+}
+
+.maxWidth{
+    max-width: 90em; /*1440px*/
+}
+
+.header{
+    text-align: center;
+    margin: auto;
+}
+
+.header_logo{
+    width: 5.9em;
+    height: 100%;
+    margin: 1em;
+}
+
+.header_nav{
+    background-color: var(--primary-color);
+}
+
+ul{
+    margin:0;
+}
+
+.header_menu{
+    list-style-type: none;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
+    text-align: right;
+    text-decoration: none;
+}
+
+.header_menu li {
+    padding: .25em 0;
+    display: inline-block;
+}
+
+
+.header_menu a {
+    display: block;
+    padding: 1em;
+    color: var(--red);
+    text-decoration: none;
+}
+
+
+a {
+    color: inherit;
+}
+
+.header_menu a:hover{
+    background-color: color-mix(in srgb, var(--primary-color), white 20%);
+}
+
+@media screen and (min-width:48em){
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header_logo{
+        margin-left: 2em;
+    }
+
+    .header_nav{
+        background-color: initial;
+    }
+
+    .header_menu{
+        margin-right: 2em;
+        font-size: 0.9em;
+    }
+        
+    .header_menu li {
+        display: inline-block;
+    }
+
+    .header_menu a{
+        color: var(--red);
+        border-radius: 5px;
+        text-decoration: none;
+    }
+ 
+    .header_menu a:hover{
+        background-color: color-mix(in srgb, var(--primary-color), white 80%);
+    }
+}
+
+.trailer{
+    background-color: var(--primary-color-dark);
+    padding-bottom: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 1.5em;
+}
+
+.trailer div{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.trailer_title{
+    margin-top: 0;
+    padding-top: .5em;
+    color: var (--primary-color);
+}
+
+.trailer h1{
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: var(--red);
+}
+
+.trailer_paragrafo{
+    font-size: 1.1em;
+}
+
+
+.trailer_botao{     /* Estilos para telas de celular */
+    display: block;
+    margin-top: 1em;
+    padding: 1em 2em;
+    background-color: var(--beige);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+.trailer_botao:hover{
+    background-color: color-mix(in srgb, var(--primary-color), white 20%);
+}
+
+
+
+/* Estilos para garantir que o container dos cards ocupe toda a largura */
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada artigo */
+article {
+    position: relative; /* Define a posição do artigo como relativa */
+    margin-bottom: 20px; /* Espaçamento entre os cards */
+}
+
+
+.main_botao{
+    display: block;
+    margin-top: auto;
+    padding: 1em 2em;
+    background-color: var(--beige);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--red);
+    text-transform: uppercase;
+
+    position: relative;
+    bottom: 1px; /* Ajuste aqui a distância do botão em relação ao final do artigo */
+    left: 50%; /* Centraliza horizontalmente o botão no artigo */
+    transform: translateX(-50%); /* Ajuste para centralizar corretamente */
+    text-align: center;
+
+    width: 100%;
+    max-width: 200px; /* Change this value to adjust the button's maximum width */
+
+}
+
+.main_botao:hover{
+    background-color: color-mix(in srgb, var(--primary-color), white 20%);
+}
+
+
+ /* Estilos gerais para o vídeo */
+ .iframeContainer {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 (para vídeos responsivos) */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.iframeContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+@media screen and (max-width: 47em) {
+    .trailer_botao {
+        display: block; /* Torna o botão visível em telas menores */
+    }
+
+    .iframeContainer {
+        display: none; /* Oculta o vídeo em telas menores */
+    }
+}
+
+
+@media screen and (min-width:48em){
+    .trailer{
+        background-image: url(imagens/fundo-vintage.jpg);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: initial;
+    }
+     
+    .trailer_paragrafo{
+       margin-bottom: 2em;;
+    }
+
+    /* Estilos para telas com largura de 768 pixels ou mais (tamanhos de tablet e desktop) */
+
+    /* Estilos para o botão do trailer em telas de tablet e desktop */
+    .trailer_botao {
+        display: none; /* Esconder o botão em telas maiores */
+    }
+
+    /* Estilos para o iframe em telas de tablet e desktop */
+    .iframeContainer {
+        display: block; /* Exibir o iframe em telas maiores */
+    }
+}
+
+
+
+.main_content{
+    background-color: var(--primary-color-dark);
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.main_content div{
+    margin:auto;
+    padding: 1em;
+    width: 80%;
+}
+
+.main_content_title{
+    color: var(--red);
+}
+
+.icon_img{
+    width: 5.5em;
+    transition: transform 0.5s ease; /* Adiciona uma transição suave */
+}
+
+.icon_img:hover {
+    transform: scale(1.2); /* Faz o zoom em 20% (1.2 é 120% do tamanho original) */
+  }
+  
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Center the cards horizontally */
+
+}
+
+
+.col{
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 47em) {
+.col-12{
+    width: 100%;
+}
+}
+
+@media screen and (min-width:48em){
+    .col-md-6{
+        width: calc(50% - 2rem);
+    }
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--red);
+    padding: 1em;
+    text-align: center;
+}
+
